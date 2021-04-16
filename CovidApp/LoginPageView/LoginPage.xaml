@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CovidApp.LoginPageView.LoginPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Margin="10,10,10,10">
+            <Label Text="Nazwa użytkownika" FontAttributes="Bold" />
+            <Entry Placeholder="Nazwa użytkownika" Text="{Binding UsernameContent}" ReturnType="Next"/>
+            <Label Text="Hasło" FontAttributes="Bold"/>
+            <Entry IsPassword="true"  Text="{Binding PasswordContent}" ReturnType="Done" />
+            <Button Text="Zaloguj" Command="{Binding OnLoginButtonClick}"  />
+            <Label Text="Jesli nie masz konta" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <Button Text="Zarejestruj Sie!" Command="{Binding OnSignUpButtonClick}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CovidApp.MyRequestPageView.MyRequestPage">
+    <ContentPage.Content>
+        <ListView ItemsSource="{Binding RawRequests}" HasUnevenRows="True" MinimumHeightRequest="200" SeparatorColor="Black">
+            <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                        <StackLayout BackgroundColor="#eee" Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+                                <StackLayout  Orientation="Horizontal">
+                                    <Label Text="{Binding Title}" HorizontalTextAlignment="Center" TextColor="#f35e20" FontSize="15" />
+                                </StackLayout>
+                            </StackLayout>
+                            <Label Text="{Binding Description}" HorizontalOptions="Start" TextColor="#503026" HorizontalTextAlignment="Start"/>
+                            <Label Text="{Binding BuyList}"/>
+                        </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

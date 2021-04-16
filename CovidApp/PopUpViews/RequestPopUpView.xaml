@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:CovidApp.PopUpAnimation"
+             x:Class="CovidApp.PopUpViews.RequestPopUpView">
+    <pages:PopupPage.Animation>
+        <animations:RequestAnimation/>
+    </pages:PopupPage.Animation>
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="300" HeightRequest="500">
+        <Frame BackgroundColor="White">
+            <StackLayout Spacing="10">
+                <Label HorizontalOptions="Center" Text="{Binding RequestTitle}" FontAttributes="Bold" FontSize="16"/>
+                <Label HorizontalOptions="Center" Text="{Binding RequestDescription}" LineBreakMode="WordWrap" FontSize="16" HorizontalTextAlignment="Center"/>
+                <Label HorizontalOptions="Start" Text="Lista Zakupów: " FontSize="15" FontAttributes="Bold" LineBreakMode="WordWrap" />
+                <ListView IsPullToRefreshEnabled="False" ItemsSource="{Binding BuyList}" SelectionMode="None" IsEnabled="False" />
+                <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                    <Button x:Name="AcceptButton" Text="Przyjmuje" Clicked="OnAccept"/>
+                    <Button Text="Nie tym razem" Clicked="OnClose"/>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+    </pages:PopupPage>

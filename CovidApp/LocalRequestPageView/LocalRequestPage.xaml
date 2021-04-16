@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="CovidApp.LocalRequestPageView.LocalRequestPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--The map-->
+        <ContentView Content="{Binding Map}"/>
+        <ScrollView Grid.Row="0"  Orientation="Horizontal" VerticalOptions="End">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="Sprawdz swoja okolice!" Command="{Binding MovedToLocalArea}" CornerRadius="50"/>
+                <Button Text="Odśwież Okolice!" Command="{Binding RefreshedLocalArea}" CornerRadius="50"/>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

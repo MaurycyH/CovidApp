@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CovidApp.NewRequestPageView.NewRequestPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Stwórz nowe zlecenie" HorizontalTextAlignment="Center" HorizontalOptions="Center" FontSize="16"  FontAttributes="Bold"/>
+            <Entry IsPassword="False" Placeholder="Tytuł zamówienia" Text="{Binding RequestTitleContent}"/>
+            <Entry IsPassword="False" Placeholder="Opis zamówienia" Text="{Binding RequestDescriptionContent}"/>
+            <Label Text="Wypisz po przecinku liste zakupów"/>
+            <Entry IsPassword="False" Placeholder="Masło,Chleb,Szynka,Itp." Text="{Binding BuyListContent}"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                <Label Text="Czy użyć Twoja aktualna pozycje?"/>
+                <CheckBox IsChecked="{Binding IsChecked}"/>
+            </StackLayout>
+            <StackLayout>
+                <Entry Placeholder="Ulica nr domu, Miasto, Państwo" IsVisible="{Binding IsUsingOwnLocation}" Text="{Binding RequestedLocation}"/>
+            </StackLayout>
+            <Button Text="Stwórz zamówienie!" Command="{Binding NewRequested}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

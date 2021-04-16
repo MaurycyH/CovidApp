@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CovidApp.MainPageView.MainPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Wyloguj" Command="{Binding OnLogOutButtonClick}" />
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <Button Text="Przejdź do zgłoszeń w Twojej okolicy!" Command="{Binding LocalRequest}" CornerRadius="50" />
+        <Button Text="Stwórz zgłoszenie!" Command="{Binding NewRequest}" CornerRadius="50"/>
+        <Button Text="Sprawdz swoje przyjęte zgłoszenia!" Command="{Binding MyRequest}" CornerRadius="50"/>
+    </StackLayout>
+
+</ContentPage>
