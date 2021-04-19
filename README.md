@@ -5,7 +5,7 @@ It uses the local SQLite database and the [Xamarin.Forms.GoogleMaps](https://git
 
 ## Technologies
 Project is created with:
-* Xamarin.Forms ??
+* Xamarin.Forms
 * SQLite Database
 * Xamarin.Forms.GoogleMaps
 * [Rg.Plugins.Popup](https://github.com/rotorgames/Rg.Plugins.Popup)
