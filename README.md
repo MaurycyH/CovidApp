@@ -1,7 +1,9 @@
 # CovidApp
 The application was created in Xamarin.Forms in order to train my skills in C #. 
 I wrote the entire application myself. I tried to keep the MVVM pattern throughout the entire application structure.
-It uses the local SQLite database and the [Xamarin.Forms.GoogleMaps](https://github.com/amay077/Xamarin.Forms.GoogleMaps) nuget package
+It uses the local SQLite database and the [Xamarin.Forms.GoogleMaps](https://github.com/amay077/Xamarin.Forms.GoogleMaps) nuget package.
+Application let you create a request with shopping list attached to it, then other users can see your request on Google Map as a Pin. 
+Next you can click to check the request and decide whether or not to help.
 
 ## Technologies
 Project is created with:
